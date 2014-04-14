@@ -20,7 +20,7 @@
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
     <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="styles/jaguar.css">
-    
+
     <?js if (env.conf.templates) { ?>
     <script>
     var config = <?js= JSON.stringify(env.conf.templates) ?>;
@@ -32,7 +32,7 @@
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', config.googleAnalytics]);
       _gaq.push(['_trackPageview']);
-    
+
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -48,12 +48,23 @@
         <h1 class="page-title" data-filename="<?js= filename ?>"><?js= title ?></h1>
         <?js= content ?>
 
-        <?js if (env.conf.templates.disqus) { ?>
-        <!-- disqus code -->
-        <div id="disqus_thread"></div>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <!-- // disqus code -->
+        <?js if (env.conf.templates.duoshuo) { ?>
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="<?js= env.conf.templates.domain ?>/<?js= filename ?>" data-title="<?js= title ?>" data-url="<?js= env.conf.templates.domain ?>/<?js= filename ?>"></div>
+            <!-- 多说评论框 end -->
+            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+            <script type="text/javascript">
+            var duoshuoQuery = {short_name:"<?js=env.conf.templates.duoshuo?>"};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                     || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+                </script>
+            <!-- 多说公共JS代码 end -->
         <?js } ?>
 
         <footer>

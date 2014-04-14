@@ -1,16 +1,17 @@
 {
 	"tags": {
-		"allowUnknownTags" : true
+		"allowUnknownTags": true
 	},
 	"plugins": ["plugins/markdown"],
 	"templates": {
+		"domain": "",
 		"cleverLinks": true,
 		"monospaceLinks": true,
 		"default": {
-			"outputSourceFiles" : true
+			"outputSourceFiles": true
 		},
 		"applicationName": "Demo",
-		"disqus": "",
+		"duoshuo": "",
 		"googleAnalytics": "",
 		"openGraph": {
 			"title": "",
