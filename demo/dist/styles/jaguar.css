@@ -318,21 +318,21 @@ li {
 .main .readme table {
   color: #333333;
   border-width: 1px;
-  border-color: #666666;
+  border-color: #ccc;
   border-collapse: collapse;
 }
 .main .readme table th {
   border-width: 1px;
   padding: 8px;
   border-style: solid;
-  border-color: #666666;
-  background-color: #dedede;
+  border-color: #ccc;
+  background-color: #F5F5F5;
 }
 .main .readme table td {
   border-width: 1px;
   padding: 8px;
   border-style: solid;
-  border-color: #666666;
+  border-color: #ccc;
   background-color: #ffffff;
 }
 .main article ol,
