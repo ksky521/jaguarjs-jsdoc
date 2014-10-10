@@ -315,6 +315,26 @@ li {
   font-size: 0.9em;
   margin-bottom: 10px;
 }
+.main .readme table {
+  color: #333333;
+  border-width: 1px;
+  border-color: #666666;
+  border-collapse: collapse;
+}
+.main .readme table th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #dedede;
+}
+.main .readme table td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #ffffff;
+}
 .main article ol,
 .main article ul {
   margin-left: 25px;
